@@ -1,0 +1,46 @@
+Test 20.2
+<br>
+<p id="indexitem" style="display:none;">0</p>
+<button name="back" onclick="onClickBack()">Back</button>
+<button name="next" onclick="onClickNext()">Next</button>
+<button name="reset" onclick="onClickReset()">Reset</button>
+<button name="setMax" onclick="onClickSetMax()">Set Max</button>
+<button name="showItem" onclick="onClickShowItem()">Show Item</button>
+<br>
+<br>
+<br>
+<br>
+<script>
+	//============================20.2
+	let A = [10,50,5,70,24];
+	function onClickBack() {
+		var i = parseInt(document.getElementById('indexitem').textContent);
+		if(i-1 >= 0) {
+			i--;
+			alert(A[i]+"["+i+"]");
+			document.getElementById("indexitem").innerHTML = i;
+		}
+	}
+	function onClickNext() {
+		var i = parseInt(document.getElementById('indexitem').textContent);
+		if(i+1 <= 4) {
+			i++;
+			alert(A[i]+"["+i+"]");
+			document.getElementById("indexitem").innerHTML = i;
+		}
+	}
+	function onClickReset() {
+		var i = 0;
+		alert(A[i]+"["+i+"]");
+		document.getElementById("indexitem").innerHTML = i;
+	}
+	function onClickSetMax() {
+		var i = 4;
+		alert(A[i]+"["+i+"]");
+		document.getElementById("indexitem").innerHTML = i;
+	}
+	function onClickShowItem() {
+		var i = parseInt(document.getElementById('indexitem').textContent);
+		alert(A[i]+"["+i+"]");
+	}
+</script>
